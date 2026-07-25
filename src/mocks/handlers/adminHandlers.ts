@@ -5,12 +5,13 @@ import {
   getDb,
   getDirectReportIds,
 } from '@/mocks/db';
+import { MOCK_API_BASE } from '@/mocks/apiBase';
 import { apiError, requireActor, toUserSummary } from '@/mocks/http';
 import { isAdmin, normalizeRoles } from '@/mocks/policy';
 import { Roles, setManagerSchema, updateRolesSchema } from '@/shared-kernel';
 import type { AdminUserDto } from '@/shared-kernel';
 
-const API = '/api/v1';
+const API = MOCK_API_BASE;
 
 function toAdminUserDto(userId: string): AdminUserDto | null {
   const user = findUserById(userId);

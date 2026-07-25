@@ -37,7 +37,8 @@ jobs:
           # Project Pages URL path (repo name). Trailing slash required by Vite.
           VITE_BASE_PATH: /TaskSync/
           VITE_USE_MOCK_API: 'true'
-          VITE_API_BASE_URL: /api/v1
+          # Under /TaskSync/ so MSW's service worker can intercept (scope is the Pages subpath).
+          VITE_API_BASE_URL: /TaskSync/api/v1
         run: npm run build
 
       # GitHub Pages has no server rewrite. Copying index → 404 lets React Router
