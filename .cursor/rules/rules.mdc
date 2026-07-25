@@ -1,0 +1,24 @@
+---
+description: 
+alwaysApply: true
+---
+
+Always use TypeScript
+
+Never use Context API
+
+Use Redux Toolkit
+
+Use RTK Query
+
+Use Feature First Architecture
+
+Write Vitest tests
+
+Follow Atomic Design
+
+Follow ESLint rules
+
+No inline CSS
+
+Use Tailwind

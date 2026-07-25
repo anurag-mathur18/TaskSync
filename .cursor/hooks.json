@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "name": "Lint edited file",
+        "command": ".cursor/hooks/lint-edited.sh",
+        "timeout": 60
+      }
+    ],
+    "stop": [
+      {
+        "name": "Typecheck and test",
+        "command": ".cursor/hooks/verify-stop.sh",
+        "timeout": 180,
+        "loop_limit": 3
+      }
+    ]
+  }
+}
