@@ -1,5 +1,6 @@
 import { http, HttpResponse } from 'msw';
 
+import { MOCK_API_BASE } from '@/mocks/apiBase';
 import { findTaskById, findUserById, getDb } from '@/mocks/db';
 import { apiError, requireActor, toUserSummary } from '@/mocks/http';
 import {
@@ -22,7 +23,7 @@ import {
   type TaskDto,
 } from '@/shared-kernel';
 
-const API = '/api/v1';
+const API = MOCK_API_BASE;
 
 function toTaskDto(task: SeedTaskRecord): TaskDto | null {
   const owner = findUserById(task.ownerId);

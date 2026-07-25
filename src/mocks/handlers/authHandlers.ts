@@ -1,5 +1,6 @@
 import { http, HttpResponse } from 'msw';
 
+import { MOCK_API_BASE } from '@/mocks/apiBase';
 import { findUserByEmail } from '@/mocks/db';
 import {
   apiError,
@@ -11,7 +12,7 @@ import {
 } from '@/mocks/http';
 import { loginSchema } from '@/shared-kernel';
 
-const API = '/api/v1';
+const API = MOCK_API_BASE;
 
 export const authHandlers = [
   http.post(`${API}/auth/login`, async ({ request }) => {
